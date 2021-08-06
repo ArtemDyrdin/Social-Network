@@ -1,0 +1,18 @@
+{% extends 'network/base.html' %}
+
+{% block title %}Вход{% endblock %}
+
+{% block body %}
+
+<br>
+<form method="POST">
+  {% csrf_token %}
+  <h6>Имя пользователя:</h6>
+  <p>{{ form.username }}</p>
+  <h6>Пароль:</h6>
+  <p>{{ form.password }}</p>
+  <br>
+  <button type="submit" class="btn2 btn-outline-success2">Войти</button>
+</form>
+
+{% endblock %}

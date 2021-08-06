@@ -1,0 +1,59 @@
+/* COLORS:
+  #2d4059 - blue
+  #ffb400 - yellow
+  #ea5455 - pink
+  #f6f6f6 - gray
+  #ffffff - white */
+
+#body {
+  background-color: #2d4059;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+main {
+  text-align: center;
+  color: #f6f6f6;
+}
+
+.main-page {
+  display: flex;
+}
+
+.main-page .welcome {
+  text-align: left;
+  position: absolute;
+  display: block;
+  margin: 7% 0% 0% 15%;
+}
+
+.main-page .abilities {
+  text-align: left;
+  position: absolute;
+  display: block;
+  margin: 23% 0% 0% 15%;
+}
+
+.main-page .abilities .you_can {
+  font-size: x-large;
+}
+
+.main-page .abilities .i_can {
+  font-size: large;
+}
+
+.main-page .img_people {
+  position: absolute;
+  display: block;
+  margin: 5% 0% 0% 50%;
+}
+
+.main-page .buttons {
+  position: absolute;
+  display: block;
+  margin: 35% 0% 0% 15%;
+}
+
+.form {
+  background-color: #f6f6f6;
+  color: blue;
+}

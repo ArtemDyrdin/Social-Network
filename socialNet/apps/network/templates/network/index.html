@@ -1,0 +1,26 @@
+{% extends 'network/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block body %}
+
+<div class="main-page">
+    <div class="welcome">
+        <h1>Welcome</h1><br>
+        <h2>to my</h2><br>
+        <h2>social network</h2>
+    </div>
+    <div class="abilities">
+        <p class="you_can">Here you can:</p>
+        <p class="i_can">find a person and write him a message <br>or read a intersting news</p>
+    </div>
+    <div class="img_people">
+        <img src="static/imges/social-network.png" alt="">
+    </div>
+    <div class="buttons">
+        <a href="{% url 'signin' %}" class="btn btn-outline-light btn-lg">Sign In</a>
+        <a href="{% url 'signup' %}" class="btn btn-outline-light btn-lg">Sign Up</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load static %}
+
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="static/imges/icon-3.png" type="image/png">
+        <link rel="stylesheet" type="text/css" href="{% static 'network/base.css' %}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    </head>
+    <body id="body">
+        <main>
+            {% block body %}
+
+            {% endblock %}
+        </main>
+    </body>
+</html>
