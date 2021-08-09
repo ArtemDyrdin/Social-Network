@@ -48,30 +48,9 @@ class RegisterUserForm(ModelForm):
         fields = ['username', 'password', 'email', 'first_name', 'last_name']
 
         widgets = {
-            # 'username': TextInput(attrs={
-            #     'type': 'input',
-            #     'class': 'form-control',
-            #     'id': 'validationDefaultUsername',
-            #     'placeholder': 'Username',
-            #     'aria-describedby': 'inputGroupPrepend2'
-            # }),
             'password': PasswordInput(attrs={
                 'id': 'password-input'
-            }),
-            # 'email': EmailInput(attrs={
-            #     'class': 'lalala-topola'
-            # }),
-            # 'first_name': TextInput(attrs={
-            #     'class': 'form-control',
-            #     'id': 'validationDefault01',
-            #     'placeholder': 'First name'
-            # }),
-            # 'last_name': TextInput(attrs={
-            #     'type': 'input',
-            #     'class': 'form',
-            #     'id': 'validationDefault02',
-            #     'placeholder': 'Last name'
-            # })
+            })
         }
 
     def __init__(self, *args, **kwargs):

@@ -10,6 +10,20 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     </head>
     <body id="body">
+        {% if user.is_authenticated %}
+            <aside>
+                <img src="static/imges/icon-3.png" max-width="100" alt="Logo" class="logo">
+                <span class="logo">Social network</span>
+                <br><br>
+                <ul>
+                    <a href=""><li><i class="fas fa-home"></i> Главная</li></a><br>
+                    <a href=""><li><i class="fas fa-clipboard-list"></i> Мои планы</li></a><br>
+                    <a href=""><li><i class="far fa-user-circle"></i> Аккаунт</li></a><br>
+                    <a href=""><li><i class="fas fa-id-card-alt"></i> Контакты</li></a><br>
+                    <a href="{% url 'logout' %}"><li><i class="fas fa-sign-out-alt"></i> Выйти</li></a>
+                </ul> 
+            </aside>
+        {% endif %}
         <main>
             {% block body %}
 

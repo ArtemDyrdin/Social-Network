@@ -7,12 +7,22 @@
 <br>
 <form method="POST">
   {% csrf_token %}
-  <h6>Имя пользователя:</h6>
-  <p>{{ form.username }}</p>
-  <h6>Пароль:</h6>
-  <p>{{ form.password }}</p>
   <br>
-  <button type="submit" class="btn2 btn-outline-success2">Войти</button>
+  <h1> Sign in</h1>
+  <br>
+  <div class="autorize">
+    <div class="col-md-4">
+      <label for="validationCustom02">Username</label>
+      {{ form.username }}
+    </div>
+    <br>
+    <div class="col-md-4">
+      <label for="inputPassword4">Password</label>
+      {{ form.password }}
+    </div>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-outline-light btn-lg">Sign in</button>
 </form>
 
 {% endblock %}
