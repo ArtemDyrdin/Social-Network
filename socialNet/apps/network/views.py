@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import AuthUserForm
+from .forms import AuthUserForm, RegisterUserForm
 from django.contrib.auth.models import User
 
 from django.contrib.auth.views import LoginView
@@ -27,35 +27,29 @@ def register(request):
         return HttpResponseForbidden()
     else:
         if request.method == 'POST':
-            # form = RegisterUserForm(request.POST)
-            # if form.is_valid():
-            #     user = form.save()
+            form = RegisterUserForm(request.POST)
+            print("\n", "OK0\n", "")
+            if form.is_valid():
+                print("\n", "OK1\n", "")
+                user = form.save()
 
-            #     username = form.cleaned_data['username']
-            # password = form.cleaned_data['password']
-            #     email = form.cleaned_data['email']
-            #     first_name = form.cleaned_data['first_name']
-            #     last_name = form.cleaned_data['last_name']
-            username = request.POST['username']
-            password = request.POST['password']
-            email = request.POST['email']
-            first_name = request.POST['first_name']
-            last_name = request.POST['last_name']
-            # auth_user = authenticate(
-            #     username=username, password=password, email=email, first_name=first_name, last_name=last_name)
-            # login(request, auth_user)
-            user = User.objects.create_user(username=username,
-                                            email=email,
-                                            password=password,
-                                            first_name=first_name,
-                                            last_name=last_name)
-            return redirect('account')
+                username = form.cleaned_data['username']
+                password = form.cleaned_data['password']
+                email = form.cleaned_data['email']
+                first_name = form.cleaned_data['first_name']
+                last_name = form.cleaned_data['last_name']
+                auth_user = authenticate(
+                    username=username, password=password, email=email, first_name=first_name, last_name=last_name)
+                login(request, auth_user)
+                print("\n", "OK2\n", "")
 
-        # else:
-        #     form = RegisterUserForm()
+                return redirect('account')
+
+        else:
+            form = RegisterUserForm()
 
         dt = {
-            # 'form': form,
+            'form': form,
             'title': 'Sign up'
         }
 
