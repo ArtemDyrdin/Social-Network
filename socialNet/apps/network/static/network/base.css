@@ -76,11 +76,15 @@ main {
 
 aside {
   float: left;
-  max-width: 17%;
+  max-width: 20%;
   height: 100vh;
   padding: 2.5%;
   position: sticky;
   top: 0;
+  background-color: #2d4059;
+  color: #f6f6f6;
+  border-right: 3px solid #f6f6f6;
+  border-top: 3px solid #f6f6f6;
 }
 
 aside ul {
@@ -94,6 +98,7 @@ aside ul {
 aside ul li {
   display: block;
   transition: all 0.2s ease;
+  color: #f6f6f6;
 }
 
 aside ul li:hover,

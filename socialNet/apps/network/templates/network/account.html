@@ -3,15 +3,13 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block body%}
-<br>
 <div>
-    <h5>Username: </h5>
-    <span>{{ user.username }}</span>
-    <span><h5>ID: </h5>{{ user.id }}</span>
-    <span><h5>email: </h5>{{ user.email }}</span>
-    <span><h5>last_name: </h5>{{ user.last_name }}</span>
-    <span><h5>first_name: </h5>{{ user.first_name }}</span>
+    <div></div>
+    <br>
+    <h4>@ {{ user.username }}</h4>
+    <br>
+    <h3>{{user.first_name}} {{ user.last_name }}</h3>
+
 </div>
-<a href="{% url 'logout' %}">logout</a>
 
 {% endblock %}

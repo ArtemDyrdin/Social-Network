@@ -13,13 +13,15 @@
         {% if user.is_authenticated %}
             <aside>
                 <img src="static/imges/icon-3.png" max-width="100" alt="Logo" class="logo">
+                <br>
                 <span class="logo">Social network</span>
                 <br><br>
                 <ul>
-                    <a href=""><li><i class="fas fa-home"></i> Главная</li></a><br>
-                    <a href=""><li><i class="fas fa-clipboard-list"></i> Мои планы</li></a><br>
-                    <a href=""><li><i class="far fa-user-circle"></i> Аккаунт</li></a><br>
-                    <a href=""><li><i class="fas fa-id-card-alt"></i> Контакты</li></a><br>
+                    <a href=""><li><i class="far fa-newspaper"></i> News</li></a><br>
+                    <a href=""><li><i class="fas fa-user-friends"></i> Friends</li></a><br>
+                    <a href=""><li><i class="fas fa-comments"></i> Messages</li></a><br>
+                    <a href=""><li><i class="fas fa-bell"></i> Notice</li></a><br>
+                    <a href="{% url 'account' %}"><li><i class="fas fa-user-circle"></i> Account</li></a><br>
                     <a href="{% url 'logout' %}"><li><i class="fas fa-sign-out-alt"></i> Выйти</li></a>
                 </ul> 
             </aside>
