@@ -1,0 +1,32 @@
+{% extends 'network/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body%}
+<div class="friends">
+    <h3 class="friends-subtitle">Friends</h3>
+    <div class="friend_block">
+        <p>friend friend</p>
+    </div>
+</div>
+
+<h3 class="friends-subtitle">Another people</h3>
+<div class="another_people">
+    <br>
+    <div class="friends_blocks">
+        {% for person in users %}
+            {% if person != user %}
+                <div class="another_people_block">
+                    <a href="{% url 'person' person.id %}">{{ person.first_name }} {{ person.last_name }}</a>
+                    <div>
+                        <a href=""><i class="fas fa-user-plus"></i></a>
+                        <a href=""><i class="fas fa-comment"></i></a>
+                    </div>
+                </div>
+                <br>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

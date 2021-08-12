@@ -1,0 +1,18 @@
+{% extends 'network/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body%}
+<div>
+    <div></div>
+    <br>
+    <h4>@ {{ person.username }}</h4>
+    <br>
+    <h3>{{ person.first_name }} {{ person.last_name }}</h3>
+    <br>
+    <hr>
+    <br>
+    <h4>{{ person.email }}</h4>
+</div>
+
+{% endblock %}

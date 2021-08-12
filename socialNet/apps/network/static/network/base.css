@@ -80,11 +80,11 @@ aside {
   height: 100vh;
   padding: 2.5%;
   position: sticky;
-  top: 0;
   background-color: #2d4059;
   color: #f6f6f6;
   border-right: 3px solid #f6f6f6;
   border-top: 3px solid #f6f6f6;
+  top: 0%;
 }
 
 aside ul {
@@ -105,4 +105,36 @@ aside ul li:hover,
 aside ul a:hover {
   text-decoration: none;
   transform: scale(1.05);
+}
+
+.another_people {
+  display: flex;
+}
+
+.friends_blocks {
+  position: absolute;
+  display: block;
+  margin: 5% 0% 0% 30%;
+}
+
+.another_people_block {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #2d4059;
+  color: #f6f6f6;
+  font-size: x-large;
+  border: 2px solid #f6f6f6;
+  border-radius: 0.5rem;
+  width: 220%;
+  height: 20%;
+}
+
+.another_people_block a {
+  transition: all 0.2s ease;
+  color: #f6f6f6;
+}
+
+.another_people_block a:hover {
+  text-decoration: none;
+  color: #bbbbbb;
 }
