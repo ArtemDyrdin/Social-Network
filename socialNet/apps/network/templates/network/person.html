@@ -10,6 +10,8 @@
     <br>
     <h3>{{ person.first_name }} {{ person.last_name }}</h3>
     <br>
+    <a href="" class="btn btn-outline-light btn-lg"><i class="fas fa-user-plus"></i> To add to friends</a>
+    <a href="{% url 'create_dialog' person.id %}" class="btn btn-outline-light btn-lg"><i class="fas fa-comment"></i> To write a message</a>
     <hr>
     <br>
     <h4>{{ person.email }}</h4>

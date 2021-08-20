@@ -1,7 +1,17 @@
-from django.forms import ModelForm, CharField, PasswordInput, EmailInput, TextInput
+from django.forms import ModelForm, CharField, PasswordInput, EmailInput, TextInput, Textarea
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
+from .models import Message
+
+
+class MessageForm(ModelForm):
+    class Meta:
+        model = Message
+        fields = ['message']
+        widgets = {
+            'message': Textarea(attrs={'cols': 50, 'rows': 1}),
+        }
 
 
 class AuthUserForm(AuthenticationForm, ModelForm):

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'channels',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +73,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'socialNet.wsgi.application'
+# ASGI_APPLICATION = 'socialNet.asgi.application'
 
+# CHANNELS_LAYERS = {
+#     'default': {
+#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#         'CONFIG': {
+#             'hosts': [('localhost', 6379)]
+#         }
+#     }
+# }
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

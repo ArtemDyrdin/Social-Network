@@ -1,0 +1,31 @@
+{% extends 'network/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body%}
+
+{% if not chat %}
+    <div class="panel panel-body">
+        <h3>Невозможно начать беседу. Не найден пользователь или вы не имеете доступа к данной беседе.</h3>
+    </div>
+{% else %}
+    {% load tz %}
+    {% if chat %}
+        <div id="messages" class="panel">
+            <div id="innerMessages">
+                {% for message in chat.message_set.all %}
+                        {% include 'network/message.html' with message_item=message %}
+                {% endfor %}
+            </div>
+            <div id="message_form">
+                <form id="message-form" class="panel panel-body" method="post" >
+                    {% csrf_token %}
+                    {{ form }}
+                    <button type="submit" class="btn btn-outline-light btn-lg" onclick="return ETextEditor.validateForm('message-form')"><span class="ico ico-comment"></span>Отправить</button>
+                </form>
+            </div>
+        </div>
+    {% endif %}
+{% endif %}
+
+{% endblock %}

@@ -20,7 +20,7 @@
                     <a href="{% url 'person' person.id %}">{{ person.first_name }} {{ person.last_name }}</a>
                     <div>
                         <a href=""><i class="fas fa-user-plus"></i></a>
-                        <a href=""><i class="fas fa-comment"></i></a>
+                        <a href="{% url 'create_dialog' person.id %}"><i class="fas fa-comment"></i></a>
                     </div>
                 </div>
                 <br>

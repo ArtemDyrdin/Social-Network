@@ -138,3 +138,20 @@ aside ul a:hover {
   text-decoration: none;
   color: #bbbbbb;
 }
+
+.panel {
+  position: absolute;
+  display: block;
+  margin: 5% 0% 0% 30%;
+}
+
+#innerMessages {
+  text-align: center;
+  font-family: sans-serif;
+  color: #2d4059;
+  font-size: large;
+  border: 2px solid #f6f6f6;
+  border-radius: 0.5rem;
+  width: 220%;
+  height: 20%;
+}
