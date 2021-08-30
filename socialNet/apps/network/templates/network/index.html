@@ -6,9 +6,7 @@
 
 <div class="main-page">
     <div class="welcome">
-        <h1>Welcome</h1><br>
-        <h2>to my</h2><br>
-        <h2>social network</h2>
+        <h1>Welcome <br>to my <br>social network</h1>
     </div>
     <div class="abilities">
         <p class="you_can">Here you can:</p>
@@ -17,10 +15,15 @@
     <div class="img_people">
         <img src="static/imges/social-network.png" alt="">
     </div>
+
+{% if not user.is_authenticated %}
     <div class="buttons">
-        <a href="{% url 'signin' %}" class="btn btn-outline-light btn-lg">Sign In</a>
-        <a href="{% url 'signup' %}" class="btn btn-outline-light btn-lg">Sign Up</a>
+        <a href="{% url 'signin' %}" class="btn btn-primary btn-lg">Sign In</a>
+        <a href="{% url 'signup' %}" class="btn btn-secondary btn-lg">Sign Up</a>
     </div>
+
+{% endif %}
+
 </div>
 
 {% endblock %}

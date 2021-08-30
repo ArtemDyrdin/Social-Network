@@ -19,35 +19,6 @@ class AuthUserForm(AuthenticationForm, ModelForm):
         model = User
         fields = ['username', 'password', 'email', 'first_name', 'last_name']
 
-    widgets = {
-        'username': TextInput(attrs={
-            'type': 'text',
-            'class': 'form-control',
-            'id': 'validationDefaultUsername',
-            'placeholder': 'Username',
-            'aria-describedby': 'inputGroupPrepend2',
-            'required': 'required'
-        }),
-        'password': PasswordInput(attrs={
-            'id': 'password-input'
-        }),
-        'email': EmailInput(attrs={
-            'class': 'lalala-topola'
-        }),
-        'first_name': TextInput(attrs={
-            'class': 'form-control',
-            'id': 'validationDefault01',
-            'placeholder': 'First name',
-            'required': 'required'
-        }),
-        'last_name': TextInput(attrs={
-            'class': 'form-control',
-            'id': 'validationDefault02',
-            'placeholder': 'Last name',
-            'required': 'required'
-        })
-    }
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 

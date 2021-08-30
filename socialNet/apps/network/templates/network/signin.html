@@ -8,21 +8,24 @@
 <form method="POST">
   {% csrf_token %}
   <br>
-  <h1> Sign in</h1>
+  <h1>Sign in</h1>
   <br>
-  <div class="autorize">
-    <div class="col-md-4">
-      <label for="validationCustom02">Username</label>
-      {{ form.username }}
+  <div class="container">
+    <div class="row">
+      <div class="col align-self-center mb-3">
+        <label for="validationCustom02">Username</label><br>
+        {{ form.username }}
+      </div>
     </div>
-    <br>
-    <div class="col-md-4">
-      <label for="inputPassword4">Password</label>
-      {{ form.password }}
+    <div class="row">
+      <div class="col align-self-center">
+        <label for="inputPassword4">Password</label><br>
+        {{ form.password }}
+      </div>
     </div>
   </div>
   <br>
-  <button type="submit" class="btn btn-outline-light btn-lg">Sign in</button>
+  <button type="submit" class="btn btn-primary btn-lg">Log in</button>
 </form>
 
 {% endblock %}

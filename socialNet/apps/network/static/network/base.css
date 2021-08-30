@@ -6,13 +6,13 @@
   #ffffff - white */
 
 #body {
-  background-color: #2d4059;
+  background-color: #f6f6f6;
   font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
 main {
   text-align: center;
-  color: #f6f6f6;
+  color: #2d4059;
 }
 
 .main-page {
@@ -45,6 +45,8 @@ main {
   position: absolute;
   display: block;
   margin: 5% 0% 0% 50%;
+  background-color: #2d4059;
+  border-radius: 10px;
 }
 
 .main-page .buttons {
@@ -53,105 +55,23 @@ main {
   margin: 35% 0% 0% 15%;
 }
 
-.autorize {
-  text-align: center;
-}
-
-.autorize input {
-  display: block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-family: sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-aside {
-  float: left;
-  max-width: 20%;
-  height: 100vh;
-  padding: 2.5%;
-  position: sticky;
-  background-color: #2d4059;
-  color: #f6f6f6;
-  border-right: 3px solid #f6f6f6;
-  border-top: 3px solid #f6f6f6;
-  top: 0%;
-}
-
-aside ul {
-  list-style: none;
-  position: relative;
-  margin-right: 5%;
-  text-align: left;
-  padding-inline-start: 0%;
-}
-
-aside ul li {
-  display: block;
-  transition: all 0.2s ease;
-  color: #f6f6f6;
-}
-
-aside ul li:hover,
-aside ul a:hover {
-  text-decoration: none;
-  transform: scale(1.05);
-}
-
-.another_people {
-  display: flex;
-}
-
-.friends_blocks {
-  position: absolute;
-  display: block;
-  margin: 5% 0% 0% 30%;
-}
-
-.another_people_block {
-  text-align: center;
-  font-family: sans-serif;
-  background-color: #2d4059;
-  color: #f6f6f6;
-  font-size: x-large;
-  border: 2px solid #f6f6f6;
-  border-radius: 0.5rem;
-  width: 220%;
-  height: 20%;
-}
-
-.another_people_block a {
-  transition: all 0.2s ease;
-  color: #f6f6f6;
-}
-
-.another_people_block a:hover {
-  text-decoration: none;
-  color: #bbbbbb;
-}
-
 .panel {
   position: absolute;
   display: block;
   margin: 5% 0% 0% 30%;
 }
 
-#innerMessages {
+/* #innerMessages {
   text-align: center;
   font-family: sans-serif;
-  color: #2d4059;
+  color: #f6f6f6;
   font-size: large;
-  border: 2px solid #f6f6f6;
+  border: 2px solid #2d4059;
   border-radius: 0.5rem;
   width: 220%;
   height: 20%;
+} */
+
+.friend {
+  color: #2d4059;
 }

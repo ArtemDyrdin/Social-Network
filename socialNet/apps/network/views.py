@@ -14,13 +14,10 @@ from django.db.models import Count
 
 
 def main(request):
-    if request.user.is_authenticated:
-        return HttpResponseForbidden()
-    else:
-        data = {
-            'title': 'Welcome'
-        }
-        return render(request, 'network/index.html', data)
+    data = {
+        'title': 'Welcome'
+    }
+    return render(request, 'network/index.html', data)
 
 
 def account(request):
@@ -63,7 +60,6 @@ class CreateDialogView(View):
             chat = chats.first()
         print(f'\n', chat.id, '\n')
         return redirect(reverse('messages', kwargs={'chat_id': chat.id}))
-        # return redirect(reverse('messages'))
 
 
 class MessagesView(View):

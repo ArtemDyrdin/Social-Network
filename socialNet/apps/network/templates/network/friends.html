@@ -11,22 +11,20 @@
 </div>
 
 <h3 class="friends-subtitle">Another people</h3>
-<div class="another_people">
-    <br>
-    <div class="friends_blocks">
+<div class="container d-flex justify-content-center">
+    <ul class="list-group col-5">
         {% for person in users %}
             {% if person != user %}
-                <div class="another_people_block">
-                    <a href="{% url 'person' person.id %}">{{ person.first_name }} {{ person.last_name }}</a>
+                <li class="list-group-item mb-1">
+                    <a href="{% url 'person' person.id %}" class="card-link friend">{{ person.first_name }} {{ person.last_name }}</a>
                     <div>
-                        <a href=""><i class="fas fa-user-plus"></i></a>
-                        <a href="{% url 'create_dialog' person.id %}"><i class="fas fa-comment"></i></a>
+                        <a href="" class="friend"><i class="fas fa-user-plus"></i></a>
+                        <a href="{% url 'create_dialog' person.id %}" class="friend"><i class="fas fa-comment"></i></a>
                     </div>
-                </div>
-                <br>
+                </li>
             {% endif %}
         {% endfor %}
-    </div>
+    </ul>
 </div>
 
 {% endblock %}
